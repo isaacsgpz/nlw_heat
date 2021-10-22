@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/responsive.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,15 +20,19 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" sizes="16x16" id="favIcon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Isaac | NLW Heat 2k21</title>
   </head>
   <body>
     <main>
+
+      <div class="badge-rope"></div>
+      <div class="badge-gap"></div>
+
       <div class="container">
         <div class="avatar">
           <span>
-            <img src="images/build.svg" alt="Selo Rocketseat" />
+            <img src="/src/img/build.svg" alt="Selo Rocketseat" />
           </span>
           <img
             src="https://lorempixel.com/185/185/people/"
@@ -38,13 +42,18 @@
         </div>
 
         <h1 id="userName">Isaac Santiago</h1>
-        <a id="userLink" href="https://github.com/eoisaac" target="_blank">
+        <a
+          id="userLink"
+          href="https://github.com/eoisaac"
+          target="_blank"
+          class="github-usr"
+        >
           <span>
             <i class="fab fa-github"></i>
           </span>
 
-          <span id="userLogin">eoisaac</span></a
-        >
+          <span id="userLogin">eoisaac</span>
+        </a>
 
         <p id="userBio"></p>
 
@@ -63,6 +72,7 @@
               </span>
             </a>
           </li>
+
           <li class="instagram" title="User Instagram">
             <a href="https://instagram.com/_eoisaac" target="_blank">
               <span class="icon-link">
@@ -79,8 +89,10 @@
           </li>
         </ul>
       </div>
+
+      <!-- <img src="src/img/DoWhile2021Logo.png" alt=""> -->
     </main>
 
-    <script src="main.js"></script>
+    <script src="src/js/main.js"></script>
   </body>
 </html>

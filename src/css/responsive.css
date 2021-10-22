@@ -1,0 +1,38 @@
+@media (min-width: 800px) {
+  /* main {
+		width: 358px;
+    height: 540px;
+		background: url(/src/img/backgroundDesktop.svg);
+
+	}
+
+	.avatar {
+    margin: 5.9rem auto 0;
+  }
+
+	ul {
+    margin: 1rem auto 0;
+  }
+
+	.badge-rope {
+    position: absolute;
+    z-index: 3;
+    width: 80px;
+    height: 7.5rem;
+		background-color: var(--pink);
+    border-radius: 0 0 3px 3px;
+    top: 0;
+    margin-left: 8.6rem;
+	}
+
+	.badge-gap {
+    position: absolute;
+    background: #121214;
+    z-index: 1;
+    width: 90px;
+    height: 12px;
+    margin-left: 8.3rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+	} */
+}
