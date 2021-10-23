@@ -3,7 +3,7 @@ const socialMediaLinks = {
   linkedin: 'eoisaac',
   portfolio: 'eoisaac',
   instagram: '_eoisaac',
-  twitter: '_eoisaac'
+  twitter: '_eoisaac',
 }
 
 function updateSocialMediaLinks() {
@@ -11,13 +11,13 @@ function updateSocialMediaLinks() {
     const socialMedia = li.getAttribute('class')
 
     if (socialMedia === 'linkedin')
-      li.children[0].href = `https://${socialMedia}.com/in/${socialMediaLinks[socialMedia]}`
+      li.children[0].href = `https://${socialMedia}.com/in/${socialMediaLinks[socialMedia]}`;
 
     else if (socialMedia === 'portfolio')
-      li.children[0].href = `https://${socialMediaLinks[socialMedia]}.github.io`
+      li.children[0].href = `https://${socialMediaLinks[socialMedia]}.github.io`;
       
     else
-      li.children[0].href = `https://${socialMedia}.com/${socialMediaLinks[socialMedia]}`
+      li.children[0].href = `https://${socialMedia}.com/${socialMediaLinks[socialMedia]}`;
   }
 }
 
@@ -28,15 +28,15 @@ function getGitHubProfileData() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      userName.textContent = data.name
-      userBio.textContent = data.bio
-      userLink.href = data.html_url
-      UserImage.src = data.avatar_url
-      userLogin.textContent = data.login
+      userName.textContent = data.name;
+      userBio.textContent = data.bio;
+      userLink.href = data.html_url;
+      UserImage.src = data.avatar_url;
+      userLogin.textContent = data.login;
 
-      favIcon.href = data.avatar_url
-      document.title = `${data.name} | NLW Heat 2021`
-    })
+      favIcon.href = data.avatar_url;
+      document.title = `${data.name} | NLW Heat 2021`;
+    });
 }
 
 //Settings modal
@@ -59,12 +59,23 @@ const displayModal = (modalID) => {
 }
 
 //Dark Mode
-// const html = document.querySelector('html');
-// const darkModeCheckbox = document.querySelector('#dark-mode-check');
+const html = document.querySelector('html');
+const darkModeCheckbox = document.querySelector('#dark-mode-check');
 
-// darkModeCheckbox.addEventListener('change', () => {
-// 	html.classList.toggle('dark-mode');
-// });
+if(darkModeCheckbox.checked) html.classList.toggle('dark-mode');
 
-updateSocialMediaLinks()
-getGitHubProfileData()
+darkModeCheckbox.addEventListener('change', () => {
+	html.classList.toggle('dark-mode');
+});
+
+//Color Themes
+const colorThemesList = document.querySelector('#color-themes-list');
+
+colorThemesList.addEventListener('change', () => {
+  console.log(colorThemesList.value);
+
+  
+});
+
+updateSocialMediaLinks();
+getGitHubProfileData();

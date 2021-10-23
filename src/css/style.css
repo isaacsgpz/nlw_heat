@@ -1,14 +1,21 @@
 :root {
-  --background-page: #09090A;
-  --background-card: #202024;
-  --background-icons: 	#323238;
+  --background-page:   #fafafa;
+  --background-card: #d2d3db;
+  --background-icons: 	#9394a5;
+  --font-color: #09090A;
+
   --light-gray: #e0e0e5;
   --dark-gray: #323238;
   --pink: #FF008E;
   --yellow: #FFCD1E;
   --orange: #FF7A29;
+}
 
-  --font-color: #09090A;
+.dark-mode:root {
+  --background-page: #09090A;
+  --background-card: #202024;
+  --background-icons: 	#323238;
+  --font-color: #e0e0e5;
 }
 
 * {
@@ -132,10 +139,6 @@ ul {
   transform: translateY(-5px);
 }
 
-.github-usr:hover {
-  color: var(--yellow);
-}
-
 .badge-rope,
 .badge-gap,
 .modal-container {
@@ -168,7 +171,7 @@ ul {
 	border-radius: 10px;
 
 	color: var(--font-color);
-	background-color: white;
+	background-color: var(--background-card);
 }
 
 .option-item {
@@ -193,8 +196,10 @@ ul {
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--font-color);
 }
 
+.github-usr:hover,
 .options-button:hover,
 .close-modal-button:hover {
   color: var(--orange);
