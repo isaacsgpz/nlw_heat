@@ -19,7 +19,7 @@ body {
 body,
 main,
 .container,
-.icon-link{
+.icon-link {
   display: grid;
   place-items: center;
 }
@@ -70,7 +70,6 @@ main {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
-
 h1 {
   font-size: 1.5rem;
   margin-top: 1.5rem;
@@ -115,8 +114,8 @@ ul {
 
 .icon-link:hover {
   background-image: var(--color-theme);
-  background-size: 300% 300%;
-	animation: gradient-bg 15s ease-in-out infinite;
+  background-size: 250%;
+  animation: gradient-bg 10s ease infinite;
   border-radius: 25px;
   transform: translateY(-5px);
 }
@@ -130,40 +129,81 @@ ul {
 /* OPTIONS MODAL  */
 
 .modal-container {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 3;
-	display: none;
-	place-items: center;
-	background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  display: none;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .options-modal {
-	width: 30%;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	min-width: 315px;
-	padding: 20px;
-	border-radius: 10px;
+  width: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 315px;
+  padding: 20px;
+  border-radius: 10px;
 
-	color: var(--font-color);
-	background-color: var(--background-card);
+  color: var(--font-color);
+  background-color: var(--background-card);
 }
 
 .option-item {
   width: 100%;
   margin-top: 1rem;
   padding: 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
 }
 
-.modal-container.display {
-	display: grid;
+.options-title {
+  text-decoration: underline 1px var(--font-color);
+}
+
+.select-input,
+.text-input,
+.check-input {
+  outline: none;
+  border: none;
+  color: var(--background-card);
+  background-color: var(--font-color);
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 10px;
+  border: solid 1px var(--background-card);
+}
+
+.text-input {
+  width: 100%;
+  padding-right: 30px;
+  background-color: var(--font-color);
+}
+
+.check-input {
+  width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.search-container {
+  position: relative;
+  max-width: 180px;
+}
+
+.search-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  color: var(--background-card);
 }
 
 .options-button,
@@ -175,33 +215,61 @@ ul {
 
   margin: 10px;
   font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
   color: var(--font-color);
 }
 
+.search-button,
+.options-button,
+.close-modal-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-container.display {
+  display: grid;
+}
+
+.text-input:focus,
+.select-input:focus {
+	border-color: var(--yellow);
+}
+
 .github-usr:hover,
-.options-button:hover,
-.close-modal-button:hover {
+.button:hover,
+.search-button:hover {
   color: var(--font-hover);
 }
 
+/* ANIMAÇÕES */
 .gradient-animation {
-  background-size: 300% 300%;
-	animation: gradient-bg 15s ease-in-out infinite;
+  background-size: 250%;
+  animation: gradient-bg 10s ease infinite;
 }
 
 @keyframes gradient-bg {
-	0% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
 
-	50% {
-		background-position: 100% 50%;
-	}
+  50% {
+    background-position: 100% 50%;
+  }
 
-	100% {
-		background-position: 0% 50%;
-	}
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.rotate {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

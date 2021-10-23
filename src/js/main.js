@@ -23,9 +23,10 @@ const updateSocialMediaLinks = () => {
 }
 
 //Get API Data
-const getGitHubProfileData = () => {
-  const favIcon = document.querySelector("link[rel='shortcut icon']")
-  const url = `https://api.github.com/users/${socialMediaLinks.github}`
+const getGitHubProfileData = (input = socialMediaLinks.github ) => {
+  const favIcon = document.querySelector("link[rel='shortcut icon']");
+
+  const url = `https://api.github.com/users/${input}`;
 
   fetch(url)
     .then(response => response.json())
@@ -40,6 +41,17 @@ const getGitHubProfileData = () => {
       document.title = `${data.name} | NLW Heat 2021`;
     });
 }
+
+const searchButton = document.querySelector('#search-button');
+
+searchButton.addEventListener('click', () => {
+
+  const gitHubNickInput = document.querySelector('#github-nick-input').value;
+
+  if(gitHubNickInput.length === 0) return;
+  
+  else getGitHubProfileData(gitHubNickInput);
+});
 
 //Settings modal
 const optionsButton = document.querySelector('#options-button');
