@@ -33,7 +33,7 @@ body,
 }
 
 main {
-  background: url(./src/img/background.svg) no-repeat center/cover;
+  background: url(src/img/background.svg) no-repeat center/cover;
   width: 100vw;
   height: 100vh;
   min-height: 812px;
