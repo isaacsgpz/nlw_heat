@@ -2,14 +2,12 @@
 	main {
 		width: 358px;
 		height: 540px;
-
 	}
 
 	main,
 	.gradient-pentagon,
 	.badge-gap {
 		border-radius: 10px;
-		font-family: ;
 	}
 
 	.gradient-pentagon {
@@ -24,11 +22,11 @@
 
 	.badge-rope {
 		width: 64px;
-		height: 210px;
+		height: 250px;
 		top: 0;
 		z-index: 3;
 		/* border-radius: 0 0 5px 5px; */
-		transform: translateY(-190px);
+		transform: translateY(-230px);
 
 		background-image: var(--color-theme);
 	}
@@ -42,6 +40,7 @@
 
 		background-color: var(--background-page);
 	}
+
 }
 
 /* @print */

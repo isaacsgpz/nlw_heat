@@ -13,6 +13,7 @@ body {
 }
 
 body {
+  position: relative;
   background-color: var(--background-page);
 }
 
@@ -237,7 +238,8 @@ ul {
 
 .github-usr:hover,
 .button:hover,
-.search-button:hover {
+.search-button:hover,
+.close-modal-button:hover {
   color: var(--font-hover);
 }
 

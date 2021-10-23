@@ -49,7 +49,7 @@ searchButton.addEventListener('click', () => {
   const gitHubNickInput = document.querySelector('#github-nick-input').value;
 
   if(gitHubNickInput.length === 0) return;
-  
+
   else getGitHubProfileData(gitHubNickInput);
 });
 
@@ -85,7 +85,7 @@ darkModeCheckbox.addEventListener('change', () => {
 //Color Themes
 const updateColorTheme = () => {
   const themeName = colorThemesList.value;
-  
+
   html.classList.add(`${themeName}`);
 }
 
