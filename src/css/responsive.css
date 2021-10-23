@@ -1,38 +1,44 @@
-@media (min-width: 800px) {
-  /* main {
+@media (min-width: 480px){
+	main {
 		width: 358px;
-    height: 540px;
-		background: url(/src/img/backgroundDesktop.svg);
+		height: 540px;
 
 	}
 
-	.avatar {
-    margin: 5.9rem auto 0;
-  }
+	main,
+	.gradient-pentagon,
+	.badge-gap {
+		border-radius: 10px;
+	}
 
-	ul {
-    margin: 1rem auto 0;
-  }
+	.gradient-pentagon {
+		height: 128px;
+	}
+
+	.badge-rope,
+	.badge-gap {
+		display: flex;
+		position: absolute;
+	}
 
 	.badge-rope {
-    position: absolute;
-    z-index: 3;
-    width: 80px;
-    height: 7.5rem;
-		background-color: var(--pink);
-    border-radius: 0 0 3px 3px;
-    top: 0;
-    margin-left: 8.6rem;
+		width: 64px;
+		height: 210px;
+		top: 0;
+		z-index: 3;
+		transform: translateY(-190px);
+		background-color: aquamarine;
 	}
 
 	.badge-gap {
-    position: absolute;
-    background: #121214;
-    z-index: 1;
-    width: 90px;
-    height: 12px;
-    margin-left: 8.3rem;
-    margin-top: 1.5rem;
-    border-radius: 1.5rem;
-	} */
+		width: 80px;
+		height: 10px;
+		top: 0;
+		margin-top: 1rem;
+		z-index: 2;
+
+		background-color: purple;
+	}
 }
+
+/* @print */

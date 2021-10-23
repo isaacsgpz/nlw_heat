@@ -39,5 +39,32 @@ function getGitHubProfileData() {
     })
 }
 
+//Settings modal
+const optionsButton = document.querySelector('#options-button');
+optionsButton.addEventListener('click', () => displayModal('options-modal'));
+
+const displayModal = (modalID) => {
+	const modal = document.querySelector(`#${modalID}`);
+
+	modal.classList.add('display');
+
+	modal.addEventListener('click', e => {
+		const el = e.target;
+		if(el.id === modalID) {
+			modal.classList.remove('display');
+		}
+	});
+	const closeButton = document.querySelector('#close-modal');
+	closeButton.addEventListener('click', () => modal.classList.remove('display'));
+}
+
+//Dark Mode
+// const html = document.querySelector('html');
+// const darkModeCheckbox = document.querySelector('#dark-mode-check');
+
+// darkModeCheckbox.addEventListener('change', () => {
+// 	html.classList.toggle('dark-mode');
+// });
+
 updateSocialMediaLinks()
 getGitHubProfileData()
