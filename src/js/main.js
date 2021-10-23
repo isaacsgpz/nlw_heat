@@ -9,7 +9,7 @@ const socialMediaLinks = {
 //Add social media links
 const updateSocialMediaLinks = () => {
   for (let li of socialLinks.children) {
-    const socialMedia = li.getAttribute('class')
+    const socialMedia = li.getAttribute('class');
 
     if (socialMedia === 'linkedin')
       li.children[0].href = `https://${socialMedia}.com/in/${socialMediaLinks[socialMedia]}`;
@@ -43,14 +43,24 @@ const getGitHubProfileData = (input = socialMediaLinks.github ) => {
 }
 
 const searchButton = document.querySelector('#search-button');
+const gitHubNickInput = document.querySelector('#github-nick-input');
 
-searchButton.addEventListener('click', () => {
+const getGitHubUserInput = () => {
+  const gitHubUserNick = gitHubNickInput.value;
 
-  const gitHubNickInput = document.querySelector('#github-nick-input').value;
+  if(!gitHubUserNick) return;
 
-  if(gitHubNickInput.length === 0) return;
+  else getGitHubProfileData(gitHubUserNick);
+}
 
-  else getGitHubProfileData(gitHubNickInput);
+searchButton.addEventListener('click', getGitHubUserInput);
+
+gitHubNickInput.addEventListener('keyup', (event) => {
+
+  let key = event.keyCode;
+
+  if(key === 13) getGitHubUserInput();
+
 });
 
 //Settings modal
