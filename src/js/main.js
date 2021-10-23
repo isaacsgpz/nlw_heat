@@ -6,7 +6,8 @@ const socialMediaLinks = {
   twitter: '_eoisaac',
 }
 
-function updateSocialMediaLinks() {
+//Add social media links
+const updateSocialMediaLinks = () => {
   for (let li of socialLinks.children) {
     const socialMedia = li.getAttribute('class')
 
@@ -21,7 +22,8 @@ function updateSocialMediaLinks() {
   }
 }
 
-function getGitHubProfileData() {
+//Get API Data
+const getGitHubProfileData = () => {
   const favIcon = document.querySelector("link[rel='shortcut icon']")
   const url = `https://api.github.com/users/${socialMediaLinks.github}`
 
@@ -69,13 +71,16 @@ darkModeCheckbox.addEventListener('change', () => {
 });
 
 //Color Themes
-const colorThemesList = document.querySelector('#color-themes-list');
-
-colorThemesList.addEventListener('change', () => {
-  console.log(colorThemesList.value);
-
+const updateColorTheme = () => {
+  const themeName = colorThemesList.value;
   
-});
+  html.classList.add(`${themeName}`);
+}
+
+const colorThemesList = document.querySelector('#color-themes-list');
+colorThemesList.addEventListener('change', updateColorTheme);
+
+updateColorTheme();
 
 updateSocialMediaLinks();
 getGitHubProfileData();

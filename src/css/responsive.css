@@ -28,7 +28,8 @@
 		z-index: 3;
 		/* border-radius: 0 0 5px 5px; */
 		transform: translateY(-190px);
-		background-color: aquamarine;
+
+		background-image: var(--color-theme);
 	}
 
 	.badge-gap {
@@ -38,7 +39,7 @@
 		margin-top: 1rem;
 		z-index: 2;
 
-		background-color: black;
+		background-color: var(--background-page);
 	}
 }
 

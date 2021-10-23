@@ -1,0 +1,37 @@
+:root {
+  --background-page:   #fafafa;
+  --background-card: #d2d3db;
+  --background-icons: 	#9394a5;
+  --font-color: #09090A;
+  --font-hover: #e0e0e5;
+
+  --light-gray: #e0e0e5;
+  --dark-gray: #323238;
+  --pink: #FF008E;
+  --yellow: #FFCD1E;
+  --orange: #FF7A29;
+}
+
+.dark-mode:root {
+  --background-page: #09090A;
+  --background-card: #202024;
+  --background-icons: 	#323238;
+  --font-color: #e0e0e5;
+  --font-hover: #09090A;
+}
+
+.do-while-2021:root {
+	--color-theme: linear-gradient(to right bottom, #ff008e, #ff1f78, #ff3864, #ff4d51, #ff6140, #ff7036, #ff802b, #ff8f20, #ff9f1b, #ffae18, #ffbe18, #ffcd1e);
+}
+
+.rockeseat-vanilla:root {
+	--color-theme: linear-gradient(to right bottom, #2a263e, #2d2845, #312a4b, #342c52, #382e59, #413468, #4a3977, #533f86, #634ba2, #7457bf, #8564dd, #9771fc);
+}
+
+.nlw-heat:root {
+	--color-theme: linear-gradient(to right bottom, #8566e5, #9464de, #a062d7, #ab60d0, #b45fc9, #bd5ec3, #c55dbe, #cc5cb8, #d55bb2, #dd5bac, #e55ba6, #eb5c9f);
+}
+
+.rgb:root {
+	--color-theme: linear-gradient(to right bottom, #ff0000, #f46300, #e09100, #c6b600, #a6d600, #7cde51, #4fe381, #00e6aa, #00ced8, #00afff, #0087ff, #0043ff);
+}
